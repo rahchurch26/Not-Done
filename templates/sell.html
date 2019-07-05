@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+    Sell
+{% endblock %}
+{% block main %}
+<form action="/sell" method="post">
+  <h1>Account Balance: {{cash}}</h1>
+  <select class="form-control" name="symbol">
+    <option disabled selected value="Symbol">Symbol</option>
+  </select>
+  <input autocomplete="off" name="shares" placeholder="Shares" type="number">
+  <button type="submit">Buy</button>
+</form>
+{% endblock %}
